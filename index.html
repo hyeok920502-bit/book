@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>책갈피 독서모임 멤버 모집</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700&family=Noto+Sans+KR:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f2f4f1; --surface:#ffffff; --ink:#18232b; --muted:#56646d; --line:#d5dbd6;
+  --accent:#1f4e5f; --accent-ink:#ffffff; --ribbon:#e0a526;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#10181d; --surface:#18242b; --ink:#e8eeea; --muted:#9fb0b8; --line:#2b3a42;
+    --accent:#7fb8c9; --accent-ink:#0e1a20; --ribbon:#e8b84a; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#10181d; --surface:#18242b; --ink:#e8eeea; --muted:#9fb0b8; --line:#2b3a42;
+  --accent:#7fb8c9; --accent-ink:#0e1a20; --ribbon:#e8b84a; color-scheme:dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans KR",system-ui,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.75;font-size:17px;word-break:keep-all}
+h1,h2,h3{font-family:"Noto Serif KR","Nanum Myeongjo","Batang",serif;line-height:1.35;margin:0}
+.wrap{max-width:720px;margin:0 auto;padding:0 24px}
+section{padding:64px 0;border-top:1px solid var(--line)}
+section:first-of-type{border-top:0}
+
+/* hero with ribbon bookmark */
+.hero{position:relative;padding:88px 0 72px}
+.ribbon{position:absolute;top:0;right:28px;width:36px;height:132px;background:var(--ribbon);
+  clip-path:polygon(0 0,100% 0,100% 100%,50% 82%,0 100%)}
+.hero h1{font-size:clamp(34px,8vw,52px);font-weight:700;max-width:12em}
+.hero p.lead{font-size:19px;color:var(--muted);margin:24px 0 36px;max-width:30em}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:500;
+  padding:15px 28px;border-radius:6px;font-size:17px;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--ribbon);outline-offset:3px}
+.deadline{margin-top:16px;font-size:15px;color:var(--muted)}
+
+h2{font-size:26px;margin-bottom:20px}
+p{margin:0 0 16px}
+ul.plain{list-style:none;margin:0;padding:0}
+ul.plain li{padding:14px 0 14px 28px;border-bottom:1px solid var(--line);position:relative}
+ul.plain li::before{content:"";position:absolute;left:0;top:25px;width:10px;height:10px;border-radius:50%;background:var(--ribbon)}
+
+dl.info{margin:0;display:grid;grid-template-columns:7em 1fr;background:var(--surface);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+dl.info dt,dl.info dd{margin:0;padding:16px 20px;border-bottom:1px solid var(--line)}
+dl.info dt{font-weight:500;color:var(--muted)}
+dl.info dt:nth-last-of-type(1),dl.info dd:nth-last-of-type(1){border-bottom:0}
+
+ol.steps{list-style:none;margin:0;padding:0;counter-reset:s}
+ol.steps li{counter-increment:s;position:relative;padding:0 0 28px 56px}
+ol.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:36px;height:36px;border-radius:50%;
+  background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-weight:500}
+ol.steps li::after{content:"";position:absolute;left:17px;top:42px;bottom:6px;width:2px;background:var(--line)}
+ol.steps li:last-child{padding-bottom:0}ol.steps li:last-child::after{display:none}
+ol.steps strong{display:block;font-weight:500}
+ol.steps span{color:var(--muted);font-size:16px}
+
+.final{text-align:center;padding:72px 0}
+.final h2{font-size:30px}
+.final p{color:var(--muted)}
+footer{padding:32px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:14px;text-align:center}
+@media (max-width:520px){
+  dl.info{grid-template-columns:1fr}
+  dl.info dt{border-bottom:0;padding-bottom:0}
+  .ribbon{right:20px;height:104px;width:30px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+<header class="hero wrap">
+  <div class="ribbon" aria-hidden="true"></div>
+  <h1>같이 읽으면, 책이 더 깊어집니다</h1>
+  <p class="lead">책갈피 독서모임에서 함께할 새 멤버를 모집합니다. 한 달에 한 권, 부담 없이 읽고 편하게 이야기 나눠요.</p>
+  <a class="btn" href="#" data-form>참여 신청서 작성하기</a>
+  <div class="deadline">모집 기간: 0월 0일 ~ 0월 0일</div>
+</header>
+
+<main>
+<section><div class="wrap">
+  <h2>이런 모임이에요</h2>
+  <p>매달 정해진 책 한 권을 읽고 모여서, 각자 마음에 남은 문장과 생각을 나눕니다. 정답을 찾는 자리가 아니라 서로의 시선을 듣는 자리예요.</p>
+  <p>다 읽지 못해도 괜찮습니다. 읽은 만큼, 느낀 만큼 이야기하면 됩니다.</p>
+</div></section>
+
+<section><div class="wrap">
+  <h2>이런 분과 함께하고 싶어요</h2>
+  <ul class="plain">
+    <li>책을 좋아하지만 혼자서는 꾸준히 읽기 어려운 분</li>
+    <li>내 생각을 나누고 다른 사람의 생각도 듣고 싶은 분</li>
+    <li>평소 읽지 않던 분야에도 열린 마음으로 도전해 보고 싶은 분</li>
+    <li>정해진 날짜에 꾸준히 참여할 수 있는 분</li>
+  </ul>
+</div></section>
+
+<section><div class="wrap">
+  <h2>모임 안내</h2>
+  <dl class="info">
+    <dt>모임 주기</dt><dd>월 1회 (예: 매월 셋째 주 토요일)</dd>
+    <dt>시간</dt><dd>오후 0시 ~ 0시 (약 2시간)</dd>
+    <dt>장소</dt><dd>장소 미정 (온라인 병행 여부 추후 안내)</dd>
+    <dt>모집 인원</dt><dd>00명</dd>
+    <dt>회비</dt><dd>월 0,000원 (도서 구입비는 별도)</dd>
+  </dl>
+</div></section>
+
+<section><div class="wrap">
+  <h2>참여 신청 방법</h2>
+  <ol class="steps">
+    <li><strong>신청서 작성</strong><span>구글폼으로 간단한 설문에 답해 주세요. 5분이면 충분합니다.</span></li>
+    <li><strong>확인 연락</strong><span>모집 마감 후 입력해 주신 연락처로 참여 여부를 안내드립니다.</span></li>
+    <li><strong>첫 모임 참석</strong><span>첫 번째 책과 모임 일정을 공유해 드립니다.</span></li>
+  </ol>
+</div></section>
+
+<section class="final"><div class="wrap">
+  <h2>다음 책장을 함께 넘겨요</h2>
+  <p>신청서를 작성해 주시면 곧 연락드리겠습니다.</p>
+  <a class="btn" href="#" data-form>참여 신청서 작성하기</a>
+</div></section>
+</main>
+
+<footer><div class="wrap">문의: 연락처 또는 이메일을 입력해 주세요</div></footer>
+
+<script>
+// 구글폼 주소를 여기에 붙여넣으세요
+var GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfQrWZppUsjqDyWnW4R3pVmAx4MEWEfJNvT7Dl5TvSJjUqXdw/viewform";
+if (GOOGLE_FORM_URL) {
+  document.querySelectorAll("[data-form]").forEach(function(a){
+    a.href = GOOGLE_FORM_URL; a.target = "_blank"; a.rel = "noopener";
+  });
+} else {
+  document.querySelectorAll("[data-form]").forEach(function(a){
+    a.addEventListener("click", function(e){ e.preventDefault(); });
+  });
+}
+</script>
+</body>
+</html>
